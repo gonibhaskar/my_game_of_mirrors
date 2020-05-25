@@ -56,6 +56,8 @@ class Game:
         uses the string.split(',') method and string slicing on the player_guess
         attribute (e.g. '5, 3') to return a tuple (e.g. (5,3)). No attribute is updated here.
         """
+	my_tuple = tuple(map(int,self.split(',')))
+	return (my_tuple)
 
     def print_result(self):
         """
@@ -64,7 +66,7 @@ class Game:
         computed with find_exit_point
         displays a Victory or Defeat message to the player accordingly.
         """
-
+	
 
 class Grid:
     def __init__(self, W, H, nb_mirrors):
